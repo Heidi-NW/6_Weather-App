@@ -1,10 +1,4 @@
- 
-
-# Weather Dashboard
-
-
-
-
+ # Weather Dashboard
 ## Table of Contents:
 ### -[Project description](#Description)
 ### -[Installation instruction](#Installation)
