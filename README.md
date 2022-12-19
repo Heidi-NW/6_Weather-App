@@ -9,6 +9,7 @@
 ### -[GitHub Username](#username)
 ### -[License](#License)
 <img width="1649" alt="Screen Shot 2022-12-19 at 4 04 53 PM" src="https://user-images.githubusercontent.com/108437457/208537763-413ba06f-50fe-41b7-a150-699cfb8b29fb.png">
+
 ## Description:
 This Weather Dashboard app will provide 5 days weather forecast for multiple cities.
 
