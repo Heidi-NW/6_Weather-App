@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Links-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4d70f3ad75.js" crossorigin="anonymous"></script>
+    <!--css>-->
+    <link rel='stylesheet' type='text/css' href='./style.css'>
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+
+    <!-- Main container -->
+    <div class=" main-container container-fluid">
+        <div class="row">
+
+            <!--Search section-->
+            <section id="search-section" class="col-md-12">
+                <h1> Weather Dashboard</h1>
+                <div class="card-body">
+                    <h3>Search for a city:</h3>
+                    <form class="form-inline">
+                        <input id="cityInput" type="text" placeholder="Enter city name" class="form-control mr-sm-3 input">
+                        <button class="btn btn-primary my-2 my-sm-0 search search-button" type="submit">
+                            Search
+                        </button>
+                    </form>
+                    <br>
+
+                    <ul id="cities-list">
+                    </ul>
+
+                </div>
+            </section>
+
+            <!--Container for weather forecast-->
+            <div id="forecast" class="col-md-12 container-left-columns">
+                <!--Current city-->
+                <div class="row">
+                    <div class="card card-city" id="current-card">
+                        <div class="card-body">
+                            <p class="current-date">Monday, November 14th</p>
+                            <p class="city">
+                            <h2></h2>
+                            </p>
+                            <p class="weather-icon"><img src="https://openweathermap.org/img/w/04d.png"></p>
+                            <p class="temperature">Temperature: 3 °C</p>
+                            <p class="humidity">Humidity: 50%</p>
+                            <p class="wind">Wind: 20 km/h</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--5 Day Forecast Title-->
+                <div id="5-days-title">
+                    <div class="forecast-title">
+                        <div class="cbforecast">
+                            <h3>5-Day Forecast:</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!--5 Day Forecast-->
+                <div class="row gutters">
+                    <!--Day 1-->
+                    <div class="col">
+                        <div class="card-forecast">
+                            <div class="card-body bg-light">
+                                <p class="day-one-date">
+                                <h6></h6>
+                                </p>
+                                <p class="day-one-icon"><img src="https://openweathermap.org/img/w/04d.png"
+                                        alt="Icon depicting current weather."></p>
+                                <p class="day-one-temperature">Temp: 3°C</p>
+                                <p class="day-one-humidity">Humidity: 50%</p>
+                                <p class="day-one-wind">Wind: 9.12 km/h</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!--Day 2-->
+                    <div class="col">
+                        <div class="card-forecast">
+                            <div class="card-body bg-light">
+                                <p class="day-two-date">
+                                <h6></h6>
+                                </p>
+                                <p class="day-two-icon"><img src="https://openweathermap.org/img/w/13d.png"
+                                        alt="Icon depicting current weather."></p>
+                                <p class="day-two-temperature">Temp: 2°C</p>
+                                <p class="day-two-humidity">Humidity: 84%</p>
+                                <p class="day-two-wind">Wind: 9.12 km/h</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 3-->
+                    <div class="col">
+                        <div class="card-forecast">
+                            <div class="card-body bg-light">
+                                <p class="day-three-date">
+                                <h6></h6>
+                                </p>
+                                <p class="day-three-icon"><img src="https://openweathermap.org/img/w/13d.png"
+                                        alt="Icon depicting current weather."></p>
+                                <p class="day-three-temperature">Temp: 1°C</p>
+                                <p class="day-three-humidity">Humidity: 92%</p>
+                                <p class="day-three-wind">Wind: 9.12 km/h</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Day 4-->
+                    <div class="col">
+                        <div class="card-forecast">
+                            <div class="card-body bg-light">
+                                <p class="day-four-date">
+                                <h6></h6>
+                                </p>
+                                <p class="day-four-icon"><img src="https://openweathermap.org/img/w/13d.png"
+                                        alt="Icon depicting current weather."></p>
+                                <p class="day-four-temperature">Temp: 1°C</p>
+                                <p class="day-four-humidity">Humidity: 77%</p>
+                                <p class="day-four-wind">Wind: 9.12 km/h</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Day 5-->
+                    <div class="col">
+                        <div class="card-forecast">
+                            <div class="card-body bg-light">
+                                <p class="day-five-date">
+                                <h6></h6>
+                                </p>
+                                <p class="day-five-icon"><img src="https://openweathermap.org/img/w/04d.png"
+                                        alt="Icon depicting current weather."></p>
+                                <p class="day-five-temperature">Temp: -1°C</p>
+                                <p class="day-five-humidity">Humidity: 68%</p>
+                                <p class="day-five-wind">Wind: 9.12 km/h</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Days-->
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+<script src='./main.js'></script>
+
+</html>
