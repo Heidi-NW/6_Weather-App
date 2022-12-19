@@ -31,7 +31,7 @@ Use browser (eg. Chrome, Firefox)
 mcmarketing.ad@gmail.com
 
 ## GitHub repo:
-Heidi-NW
+https://github.com/Heidi-NW/6_Weather-App.git
 
 ## GitHub Username:
 Heidi-NW
